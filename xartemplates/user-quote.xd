@@ -1,0 +1,6 @@
+<xar:style module="bbcode" scope="module" file="bbcode" />
+<xar:if condition="!empty($who)">
+    <dl class="bbcode-quote"><dt><xar:ml><xar:mlstring>Quote #(1):</xar:mlstring><xar:mlvar>#xarVarPrepForDisplay($who)#</xar:mlvar></xar:ml></dt><dd><blockquote>#$quote#</blockquote></dd></dl>
+<xar:else />
+    <dl class="bbcode-quote"><dt><xar:mlstring>Quote:</xar:mlstring></dt><dd><blockquote>#$quote#</blockquote></dd></dl>
+</xar:if>

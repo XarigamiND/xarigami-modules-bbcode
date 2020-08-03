@@ -1,0 +1,10 @@
+Version 2.1.0: Updated bbcode using most recent syntax highlighter
+
+Version 2.00: Using new bbcode parser from http://christian-seiler.de
+
+Version 1.00: January 17th 2003
+   - minor fix for br2nl function
+
+Version 0.99: January 11th 2003
+   - initial version
+

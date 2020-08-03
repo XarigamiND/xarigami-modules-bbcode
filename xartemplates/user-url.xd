@@ -1,0 +1,5 @@
+<xar:if condition="!empty($name)">
+    <a href="#$url#">#$name#</a>
+<xar:else />
+    <a href="#$url#">#$url#</a>
+</xar:if>

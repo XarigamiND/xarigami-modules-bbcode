@@ -1,0 +1,3 @@
+<xar:set name="dummy">include_once('modules/bbcode/xarincludes/code.php')</xar:set>
+<xar:set name="replace">str_replace('<br />', '', $replace)</xar:set>
+<pre  class="brush:vb">#$replace#</pre>

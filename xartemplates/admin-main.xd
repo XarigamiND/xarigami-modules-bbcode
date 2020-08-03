@@ -1,0 +1,32 @@
+<xar:comment> License: GPL http://www.gnu.org/copyleft/gpl.html </xar:comment>
+<div class="xar-mod-page">
+    <div class="xar-mod-head">
+        <xar:if condition="!xarRequestIsAJAX()">
+            <xar:template type="module" module="base" file="admin-menu" />
+        </xar:if>
+    </div>
+    <div class="xar-mod-body">
+        <h1>
+            <xar:mlstring>Overview</xar:mlstring>
+        </h1>
+        <div class="xar-mod-content">
+            <img src="#xarTplGetImage('admin.png','bbcode')#" class="xar-module-icon" alt="official icon"  />
+            <h2><xar:mlstring>What is it?</xar:mlstring></h2>
+                <p><xar:mlstring>The BBCode module allows you to use BBCode style mark-up in your content instead of, or with, HTML mark-up.</xar:mlstring></p>
+                <p><xar:mlstring>Adding custom bb-code is available.  This is a three step process.  First, you will need to add the tag to the system via the "add" function in your admin.  Secondly, you will need to add the corresponding API function to html/modules/bbcode/xaruserapi folder.  Examples are included.  Finally, you will need to add a template for this function in the html/modules/bbcode/xartemplates or to your theme directly.  This can be resource intensive.  If you do not want to use the advanced bb-code, turn the option off in the modify configuration section.  The advance bbcode can also be used to create custom functions to your content, by which you have the ability to place blocks, etc, into your content.  This functionality is advanced, but an example has been provided via the [you] tag which transform to the reader's name.</xar:mlstring></p>
+            <h3><xar:mlstring>Included Blocks</xar:mlstring></h3>
+                <p><xar:mlstring>The BBCode Module has no blocks included at this time.</xar:mlstring></p>
+            <h3><xar:mlstring>Included Hooks</xar:mlstring></h3>
+                <p><xar:mlstring>The BBCode has transform hooks on the output, and form control hooks on the input to allow insertion of BBCode in content.</xar:mlstring></p>
+            <h3><xar:mlstring>Further Information</xar:mlstring></h3>
+                <p><xar:mlstring>Further information on the BBCode module can be found at</xar:mlstring></p>
+                    <ul>
+                        <li><xar:mlstring>BBCode project page at</xar:mlstring> <a title="#xarML('Xarigami BBCode Module')#" href="http://xarigami.com/project/xarigami_xarbb">Xarigami Project</a>.
+                        </li>
+                    </ul>
+               <p class="xar-sub">
+                   <strong>&#160;<xar:mlstring>BBCode Module - Overview</xar:mlstring></strong><br />&#160;<xar:mlstring>Version</xar:mlstring> 2.0.1&nbsp; 2009-08-1`8
+               </p>
+        </div>
+    </div>
+</div>

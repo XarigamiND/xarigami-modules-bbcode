@@ -1,0 +1,52 @@
+<xar:comment> License: GPL http://www.gnu.org/copyleft/gpl.html </xar:comment>
+<div class="xar-mod-page">
+    <div class="xar-mod-head">
+        <xar:if condition="!xarRequestIsAJAX()">
+            <xar:template type="module" module="base" file="admin-menu" />
+        </xar:if>
+    </div>
+    <div class="xar-mod-body">
+        <h1>
+            <xar:mlstring>Modify configuration</xar:mlstring>
+        </h1>
+        <div class="xar-mod-content">
+            <form method="post" action="&xar-modurl-bbcode-admin-modifyconfig;" enctype="application/x-www-form-urlencoded" >
+                <fieldset>
+                    <legend>
+                        <xar:mlstring>Settings</xar:mlstring>
+                    </legend>
+
+                    <div class="xar-form-input-wrapper">
+                        <label for="dolinebreak" class="xar-form-label " title="#xarML('Check this if you would like the BBCode module to provide linebreaks on content.')#">
+                            <xar:mlstring>Transform Linebreaks</xar:mlstring>
+                        </label>
+                        <xar:data-input type="checkbox"  name="dolinebreak" id="dolinebreak" value="$dolinebreak" />
+                    </div>
+                    <div class="xar-form-input-wrapper">
+                        <label for="magiclink" class="xar-form-label" title="#xarML('Check this if you would like the BBCode to turn or URLs into links with and without the bbcode tag.')#">
+                            <xar:mlstring>Transform URLs without tags?</xar:mlstring>
+                        </label>
+                        <xar:data-input type="checkbox"  name="magiclink" id="magiclink" value="$magiclink" />
+                    </div>
+                    <xar:if condition="!empty($hooks)">
+                    <fieldset>
+                        <legend>
+                            <xar:mlstring>
+                                Hooked Module Configuration
+                            </xar:mlstring>
+                        </legend>
+                        <xar:foreach in="$hooks" key="$hookmodule">
+                            #$hooks[$hookmodule]#
+                        </xar:foreach>
+                    </fieldset>
+                    </xar:if>
+                </fieldset>
+                <div class="xar-form-footer">
+                    <input type="hidden" name="authid" id="authid" value="#$authid#" />
+                    <input type="hidden" name="phase" id="phase" value="update" />
+                    <input type="submit" value="#xarML('Submit')#" />
+                </div>
+           </form>
+        </div>
+    </div>
+</div>

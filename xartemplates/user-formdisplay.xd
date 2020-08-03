@@ -1,0 +1,133 @@
+<xar:style module="bbcode" file="bbcode" scope="module" />
+
+<xar:base-include-javascript filename="bbcode.js" module="bbcode" position="head" />
+<span>
+    <input type="button" accesskey="z" name="addbbcode18" value=" p " onclick="bbstyle(18)" onmouseover="document.post.helpbox.value='#xarML("Paragraph: [p]text[/p]  (alt+z)")#'; return true" />
+    <input type="button" accesskey="b" name="addbbcode0" value=" b " style="font-weight:bold;" onclick="bbstyle(0)" onmouseover="document.post.helpbox.value='#xarML("Bold text: [b]text[/b]  (alt+b)")#'; return true" />
+    <input type="button" accesskey="i" name="addbbcode2" value=" i " style="font-style:italic;" onclick="bbstyle(2)" onmouseover="document.post.helpbox.value='#xarML("Italic text: [i]text[/i]  (alt+i)")#'; return true" />
+    <input type="button" accesskey="u" name="addbbcode4" value=" u " style="font-style: underline;" onclick="bbstyle(4)" onmouseover="document.post.helpbox.value='#xarML("Underline text: [u]text[/u]  (alt+u)")#'; return true" />
+    <input type="button" accesskey="q" name="addbbcode6" value="Quote" onclick="bbstyle(6)" onmouseover="document.post.helpbox.value='#xarML("Quote text: [quote]text[/quote]  (alt+q)")#'; return true" />
+    <input type="button" accesskey="c" name="addbbcode8" value="Code" onclick="bbstyle(8)" onmouseover="document.post.helpbox.value='#xarML("Code display: [code=xml]code[/code] (alt+c)")#'; return true" />
+    <input type="button" accesskey="p" name="addbbcode14" value="Img" onclick="bbstyle(14)" onmouseover="document.post.helpbox.value='#xarML("Insert image: [img]http://image_url[/img]  (alt+p)")#'; return true" />
+    <input type="button" accesskey="w" name="addbbcode16" value="URL" style="text-decoration: underline;" onclick="bbstyle(16)" onmouseover="document.post.helpbox.value='#xarML("Insert URL: [url]http://url[/url] or [url=http://url]URL text[/url]  (alt+w)")#'; return true" />
+</span>
+<label for="addbbcode20">
+    <xar:mlstring>
+        Font color
+    </xar:mlstring>
+    :
+</label>
+<select name="addbbcode20" onchange="bbfontstyle('[color=' + this.form.addbbcode20.options[this.form.addbbcode20.selectedIndex].value + ']', '[/color]');this.selectedIndex=0;" onmouseover="document.post.helpbox.value='#xarML("Font color: [color=red]text[/color]  Tip: you can also use")# color=#FF0000'; return true">
+    <option style="color:black; background-color: #FAFAFA" value="#444444" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Default
+        </xar:mlstring>
+    </option>
+    <option style="color:darkred; background-color: #FAFAFA" value="darkred" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Dark Red
+        </xar:mlstring>
+    </option>
+    <option style="color:red; background-color: #FAFAFA" value="red" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Red
+        </xar:mlstring>
+    </option>
+    <option style="color:orange; background-color: #FAFAFA" value="orange" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Orange
+        </xar:mlstring>
+    </option>
+    <option style="color:brown; background-color: #FAFAFA" value="brown" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Brown
+        </xar:mlstring>
+    </option>
+    <option style="color:yellow; background-color: #FAFAFA" value="yellow" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Yellow
+        </xar:mlstring>
+    </option>
+    <option style="color:green; background-color: #FAFAFA" value="green" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Green
+        </xar:mlstring>
+    </option>
+    <option style="color:olive; background-color: #FAFAFA" value="olive" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Olive
+        </xar:mlstring>
+    </option>
+    <option style="color:cyan; background-color: #FAFAFA" value="cyan" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Cyan
+        </xar:mlstring>
+    </option>
+    <option style="color:blue; background-color: #FAFAFA" value="blue" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Blue
+        </xar:mlstring>
+    </option>
+    <option style="color:darkblue; background-color: #FAFAFA" value="darkblue" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Dark Blue
+        </xar:mlstring>
+    </option>
+    <option style="color:indigo; background-color: #FAFAFA" value="indigo" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Indigo
+        </xar:mlstring>
+    </option>
+    <option style="color:violet; background-color: #FAFAFA" value="violet" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Violet
+        </xar:mlstring>
+    </option>
+    <option style="color:white; background-color: #FAFAFA" value="white" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            White
+        </xar:mlstring>
+    </option>
+    <option style="color:black; background-color: #FAFAFA" value="black" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Black
+        </xar:mlstring>
+    </option>
+</select>
+<label for="addbbcode22">
+    <xar:mlstring>
+        Font size
+    </xar:mlstring>
+    :
+</label>
+<select name="addbbcode22" onchange="bbfontstyle('[size=' + this.form.addbbcode22.options[this.form.addbbcode22.selectedIndex].value + ']', '[/size]');this.selectedIndex=2;" onmouseover="document.post.helpbox.value='#xarML("Font size: [size=x-small]small text[/size]")#'; return true">
+    <option value="7" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Tiny
+        </xar:mlstring>
+    </option>
+    <option value="9" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Small
+        </xar:mlstring>
+    </option>
+    <option value="12" selected="selected" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Normal
+        </xar:mlstring>
+    </option>
+    <option value="18" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Large
+        </xar:mlstring>
+    </option>
+    <option value="24" class="xar-bbcode-genmed">
+        <xar:mlstring>
+            Huge
+        </xar:mlstring>
+    </option>
+</select>
+<a href="javascript:bbstyle(-1)" class="xar-bbcode-genmed" onmouseover="document.post.helpbox.value='#xarML("Close all open bbCode tags")#'; return true"><xar:mlstring>Close Tags</xar:mlstring></a>
+<span class="gensmall">
+    <input type="text" name="helpbox" size="50" maxlength="100" class="helpline" value="#xarML('Tip: Styles can be applied quickly to selected text.')#" />
+</span>
