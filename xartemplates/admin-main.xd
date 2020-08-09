@@ -19,11 +19,11 @@
             <h3><xar:mlstring>Included Hooks</xar:mlstring></h3>
                 <p><xar:mlstring>The BBCode has transform hooks on the output, and form control hooks on the input to allow insertion of BBCode in content.</xar:mlstring></p>
             <h3><xar:mlstring>Further Information</xar:mlstring></h3>
-                <p><xar:mlstring>Further information on the BBCode module can be found at</xar:mlstring></p>
-                    <ul>
-                        <li><xar:mlstring>BBCode project page at</xar:mlstring> <a title="#xarML('Xarigami BBCode Module')#" href="http://xarigami.com/project/xarigami_xarbb">Xarigami Project</a>.
-                        </li>
-                    </ul>
+            <ul>
+                <li><a href="http://xarigami.org/project/xarigami_xarbb"><xar:mlstring>BBCode project page</xar:mlstring></a></li>
+                <li><a href="http://xarigami.org/contrails/displayproject/xbbc"><xar:mlstring>Xarigami BBCode issue tracker</xar:mlstring></a></li>
+
+            </ul>
                <p class="xar-sub">
                    <strong>&#160;<xar:mlstring>BBCode Module - Overview</xar:mlstring></strong><br />&#160;<xar:mlstring>Version</xar:mlstring> 2.0.1&nbsp; 2009-08-1`8
                </p>
