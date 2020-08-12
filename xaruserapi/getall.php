@@ -18,7 +18,7 @@ function bbcode_userapi_getall($args)
     }
 
     // Security Check
-    //if(!xarSecurityCheck('ReadBBCodes')) {return;}
+    if(!xarSecurityCheck('OverviewBBCode')) {return;}
 
     $dbconn = xarDBGetConn();
     $xartable = xarDBGetTables();
@@ -59,7 +59,7 @@ function bbcode_userapi_getall($args)
         list(
             $id, $tag, $name, $desc, $transformed
         ) = $result->fields;
-        //if (xarSecurityCheck('ReadBBCodes', 0, 'All', $name.':'.$id)) {
+        if (xarSecurityCheck('OverviewBBCode', 0, 'All', $name.':'.$id)) {
             $codes[] = array(
                 'id' => $id,
                 'tag' => $tag,
@@ -67,7 +67,7 @@ function bbcode_userapi_getall($args)
                 'desc' => $desc,
                 'transformed' => $transformed
             );
-        //}
+        }
     }
 
     $result->Close();
