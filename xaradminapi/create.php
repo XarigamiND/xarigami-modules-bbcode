@@ -58,7 +58,8 @@ function bbcode_adminapi_create($args)
     // Get the ID of the item that we inserted
     $id = $dbconn->PO_Insert_ID($table, 'xar_id');
     // Let any hooks know that we have created a new link
-    xarModCallHooks('item', 'create', $id, 'id');
+    xarModCallHooks('item', 'create', $id,
+        array('module' => 'bbcode', 'itemtype'   => 0));
     // Return the id of the newly created link to the calling process
     return $id;
 }

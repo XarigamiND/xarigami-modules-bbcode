@@ -23,9 +23,15 @@ function bbcode_adminapi_getmenulinks()
     
     if (xarSecurityCheck('EditBBCode', 0)) {
 
-        $menulinks[] = Array('url' => xarModURL('bbcode',
-                'admin',
-                'modifyconfig'),
+        $menulinks[] = Array('url' => xarModURL('bbcode', 'admin', 'view'),
+            'title' => xarML('View all defined BBCodes'),
+            'label' => xarML('View BBCodes'),
+            'active' => array('view'));
+        $menulinks[] = Array('url' => xarModURL('bbcode', 'admin', 'new'),
+            'title' => xarML('Create a new BBCode tag'),
+            'label' => xarML('Create BBCode'),
+            'active' => array('new'));
+        $menulinks[] = Array('url' => xarModURL('bbcode', 'admin', 'modifyconfig'),
             'title' => xarML('Modify the configuration for the bbcode module'),
             'label' => xarML('Modify Config'),
             'active' => array('modifyconfig'));

@@ -45,7 +45,9 @@ function bbcode_adminapi_delete($args)
     $result = $dbconn->Execute($query,$bindvars);
     if (!$result) return;
     // Let any hooks know that we have deleted a link
-    xarModCallHooks('item', 'delete', $id, '');
+    xarModCallHooks('item', 'delete', $id,
+        array('module' => 'bbcode', 'itemtype' => 0));
+
     // Let the calling process know that we have finished successfully
     return true;
 }

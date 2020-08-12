@@ -62,6 +62,10 @@ function bbcode_adminapi_update($args)
     $bindvars = array($tag, $name, $description, $transform, $id);
     $result = $dbconn->Execute($query,$bindvars);
     if (!$result) return;
+
+    xarModCallHooks('item', 'update', $id,
+        array('itemtype' => '0', 'module' => 'bbcode'));
+
     // Let the calling process know that we have finished successfully
     return true;
 }
